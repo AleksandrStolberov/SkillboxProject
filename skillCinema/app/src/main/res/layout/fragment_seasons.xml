@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/seasonTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="26dp"
+        android:gravity="center"
+        android:text="@string/season"
+        android:textColor="@color/black_200"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myToolbar" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toEndOf="@id/seasonTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myToolbar">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:isScrollContainer="true"
+            android:paddingStart="26dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="0dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/chipStyle"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:checkable="true"
+                android:checked="true"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:chipCornerRadius="56dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/seasonsSeriesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:textColor="@color/grey_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll"
+        tools:text="1 сезон, " />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seasonsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seasonsSeriesTxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_series" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

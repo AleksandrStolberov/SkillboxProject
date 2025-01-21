@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:layout_marginBottom="50dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/movieNameTxt"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="6.4, " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/countTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Китобой" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/yearTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/genreTxt"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countTxt"
+        tools:text="2020, " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/genreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/yearTxt"
+        app:layout_constraintTop_toBottomOf="@id/movieNameTxt"
+        tools:text="приключения" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/durationTxt"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yearTxt"
+        tools:text="Россия, " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/durationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/ageTxt"
+        app:layout_constraintStart_toEndOf="@id/countryTxt"
+        app:layout_constraintTop_toBottomOf="@id/genreTxt"
+        tools:text="1 ч 33 мин, " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/durationTxt"
+        app:layout_constraintTop_toBottomOf="@id/genreTxt"
+        tools:text="16+" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

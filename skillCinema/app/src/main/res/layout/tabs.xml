@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center|bottom"
+    android:layout_marginBottom="10dp"
+    android:gravity="center|bottom"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/likeBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground" >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/likeImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/no_like" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bookmarkBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookmarkImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/no_bookmark" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/noShownBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/shownImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/no_shown" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/shareBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/share" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/otherBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/other" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

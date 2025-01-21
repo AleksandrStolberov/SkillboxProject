@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/showTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/showTxt"
+        android:textColor="@color/grey_200"
+/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal" >
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/showText"
+            android:textColor="@drawable/radio_text_color"
+            android:textSize="15sp" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="4"
+            android:background="@drawable/radio_selector_1"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/moviesTxt"
+            android:textColor="@drawable/radio_text_color"
+            android:textSize="15sp" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="3"
+            android:background="@drawable/radio_selector_2"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/series"
+            android:textColor="@drawable/radio_text_color"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+</LinearLayout>

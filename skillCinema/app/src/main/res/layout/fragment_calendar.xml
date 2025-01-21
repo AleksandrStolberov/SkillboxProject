@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <include
+        android:id="@+id/findFromTxt"
+        layout="@layout/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <include
+        android:id="@+id/findToTxt"
+        layout="@layout/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acceptBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:background="@drawable/divider_score"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/accept" />
+
+</LinearLayout>

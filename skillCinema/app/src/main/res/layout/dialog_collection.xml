@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="26dp"
+    android:background="@drawable/dialog_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/grey_100"
+        android:hint="@string/collection_name_dialog"
+        android:inputType="text|textNoSuggestions"
+        android:textColor="@color/black_200"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/grey_200"
+        android:textSize="17sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acceptBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:paddingStart="32dp"
+        android:layout_marginTop="70dp"
+        android:paddingEnd="32dp"
+        android:background="@drawable/divider_score"
+        app:layout_constraintTop_toBottomOf="@id/searchEdit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

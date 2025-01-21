@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="150dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="26dp"
+        android:scaleType="center"
+        android:background="#D6CECE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myToolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actorNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black_200"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/photoImageView"
+        app:layout_constraintTop_toBottomOf="@id/myToolbar"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Actoris Actor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/professionTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/actorAgeTxt"
+        app:layout_constraintStart_toStartOf="@id/actorNameTxt"
+        app:layout_constraintTop_toBottomOf="@id/actorNameTxt"
+        tools:text="Actor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actorAgeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_200"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/actorNameTxt"
+        app:layout_constraintTop_toBottomOf="@id/professionTxt"
+        tools:text="Age: 13" />
+
+    <TextView
+        android:id="@+id/bestTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:text="@string/theBest"
+        android:textColor="@color/black_200"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoImageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bestMovieRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bestTxt"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_movie" />
+
+    <TextView
+        android:id="@+id/moviesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:text="@string/movies"
+        android:textColor="@color/black_200"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bestMovieRecyclerView" />
+
+    <FrameLayout
+        android:id="@+id/toListBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/moviesTxt"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toList"
+            android:textColor="@color/blue_200"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="6dp"
+            android:layout_height="12dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/next" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/countMoviesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        tools:text="44 фильма"
+        android:textColor="@color/grey_200"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moviesTxt" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/waitingImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/waiting_actor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="chipStyle" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/background_color_chip_state_list</item>
+        <item name="android:textColor">@drawable/text_color_chip_state_list</item>
+        <item name="chipStrokeColor">@drawable/stroke_color_chip_state_list</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="chipStyleCalendar" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/background_color_chip_state_list</item>
+        <item name="android:textColor">@drawable/text_color_chip_state_list</item>
+        <item name="android:textAppearance">@style/ChipTextStyle</item>
+    </style>
+
+    <style name="ChipTextStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="searchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/grey_200</item>
+        <item name="drawableEndCompat">@drawable/params</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+</resources>

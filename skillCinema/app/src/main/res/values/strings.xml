@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Skillcinema</string>
+    <string name="skip_text_btn">Пропустить</string>
+    <string name="onboarding_1">Узнавай\nо премьерах</string>
+    <string name="onboarding_2">Создавай\nколлекции</string>
+    <string name="onboarding_3">Делись\nс друзьями</string>
+    <string name="title_activity_main_fragment">MainFragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_profile">Profile</string>
+    <string name="showText">Все</string>
+    <string name="show_more">Показать все</string>
+    <string name="series">Сериалы</string>
+    <string name="theBest">Лучшее</string>
+    <string name="movies">Фильмография</string>
+    <string name="toList">К списку</string>
+    <string name="gallery">Галлерея</string>
+    <string name="chip_frames">Кадры</string>
+    <string name="chip_filming">Со съемок</string>
+    <string name="chip_posters">Постеры</string>
+    <string name="filmography">Фильмография</string>
+    <string name="actress">Актриса</string>
+    <string name="actor">Актер</string>
+    <string name="producer">Продюсер</string>
+    <string name="actress_herself">Актриса: играет саму себя</string>
+    <string name="actror_doublage">Актер дубляжа</string>
+    <string name="actror_herself">Актер: играет сам себя</string>
+    <string name="season">Сезон</string>
+    <string name="seasons_series">Сезоны и серии</string>
+    <string name="in_movie">В фильме снимались</string>
+    <string name="worked">Над фильмом работали</string>
+    <string name="update">обновить</string>
+    <string name="read_more">читать далее</string>
+    <string name="read_less">скрыть</string>
+    <string name="editHint">Фильмы, актеры, режисеры</string>
+    <string name="nav_search_name">NavSearch</string>
+    <string name="nav_home_name">NavHome</string>
+    <string name="showTxt">Показывать</string>
+    <string name="moviesTxt">Фильмы</string>
+    <string name="rating">Рейтинг</string>
+    <string name="any">Любой</string>
+    <string name="accept">Выбрать</string>
+    <string name="collection">Коллекции</string>
+    <string name="create_collection">Создать свою коллекцию</string>
+    <string name="add_to_collection">Добавить в коллекцию</string>
+    <string name="create_my_collection">Создать свою коллекцию</string>
+    <string name="collection_name_dialog">\nПридумайте название\nдля вашей новой коллекции</string>
+    <string name="done">Готово</string>
+    <string name="delete_history">Очистить\n историю</string>
+    <string name="service_unavailable">"Сервис временно не доступен. Повторите попытку позже"</string>
+    <string name="unknown_error">"Произошла неизветная ошибка. Повторите попытку"</string>
+    <string name="all">Все</string>
+    <string name="similar">"Похожие фильмы"</string>
+    <string name="shown">"Просмотрено"</string>
+    <string name="interested">"Вам было интересно"</string>
+    <string name="period">"Период"</string>
+    <string name="find_to">"Искать в период до"</string>
+    <string name="not_found">"К сожалению, по вашему запросу ничего не найдено"</string>
+    <string-array name="sliderArray">
+        <item>0</item>
+        <item>10</item>
+    </string-array>
+</resources>

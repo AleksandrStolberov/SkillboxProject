@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/gradient_background">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:scrimAnimationDuration="200">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="8dp"
+                app:layout_collapseParallaxMultiplier="0.5"
+                android:layout_marginBottom="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/posterImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    tools:src="@drawable/test" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <include
+                android:id="@+id/description"
+                layout="@layout/description" />
+
+            <include
+                android:id="@+id/tabs"
+                layout="@layout/tabs" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/back" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="26dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="0dp">
+
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/movieDescriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black_200"
+                android:textSize="16sp"
+                expandableTextView:animDuration="500"
+                expandableTextView:collapsedLines="5"
+                expandableTextView:readLessText=""
+                expandableTextView:readMoreText=""
+                tools:text="Чукотский парень влюбляется  в американскую вебкам-модель. Приз Венеции, Кристина Асмус  в роли девушки мечты\n\nВсе меняется в жизни юного чукотского охотника Лёшки  с появлением в поселке интернета. Он влюбляется — впервые и сильно —  в молчаливую девушку..." />
+
+            <FrameLayout
+                android:id="@+id/seriesFrame"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seasons_series"
+                    android:textColor="@color/black_200"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/seasonsSeriesTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/grey_200"
+                    android:textSize="13sp"
+                    tools:text="1 сезон 7, серий" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/allBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/showText"
+                    android:textColor="@color/blue_200"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <include
+                android:id="@+id/actorListInfo"
+                layout="@layout/info_about_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/actorRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_actor" />
+
+            <include
+                android:id="@+id/workerListInfo"
+                layout="@layout/info_about_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/workerRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_actor" />
+
+            <include
+                android:id="@+id/galleryListInfo"
+                layout="@layout/info_about_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/galleryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="8dp"
+                tools:listitem="@layout/item_gallery" />
+
+            <include
+                android:id="@+id/similarListInfo"
+                layout="@layout/info_about_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/similarMovieRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="8dp"
+                tools:listitem="@layout/item_movie" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/waitingImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/waiting" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

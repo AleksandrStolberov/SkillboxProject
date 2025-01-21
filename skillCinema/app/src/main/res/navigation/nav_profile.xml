@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_profile"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.skillcinema.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_collectionMovieListFragment"
+            app:destination="@id/collectionMovieListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_filmPageFragment3"
+            app:destination="@id/filmPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectionMovieListFragment"
+        android:name="com.example.skillcinema.presentation.profile.CollectionMovieListFragment"
+        android:label="CollectionMovieListFragment" >
+        <argument
+            android:name="collection"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_collectionMovieListFragment_to_filmPageFragment3"
+            app:destination="@id/filmPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmPageFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.FilmPageFragment"
+        android:label="FilmPageFragment" >
+        <action
+            android:id="@+id/action_filmPageFragment3_to_actorPageFragment3"
+            app:destination="@id/actorPageFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_to_galleryFragment3"
+            app:destination="@id/galleryFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_to_photoPagerFragment3"
+            app:destination="@id/photoPagerFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_to_seasonsFragment3"
+            app:destination="@id/seasonsFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_self"
+            app:destination="@id/filmPageFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_to_staffListFragment3"
+            app:destination="@id/staffListFragment3" />
+        <action
+            android:id="@+id/action_filmPageFragment3_to_listPageFragment3"
+            app:destination="@id/listPageFragment3" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmographyFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.FilmographyFragment"
+        android:label="FilmographyFragment" >
+        <action
+            android:id="@+id/action_filmographyFragment3_to_filmPageFragment3"
+            app:destination="@id/filmPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/actorPageFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.ActorPageFragment"
+        android:label="ActorPageFragment" >
+        <action
+            android:id="@+id/action_actorPageFragment3_to_filmographyFragment3"
+            app:destination="@id/filmographyFragment3" />
+        <action
+            android:id="@+id/action_actorPageFragment3_to_filmPageFragment3"
+            app:destination="@id/filmPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.GalleryFragment"
+        android:label="GalleryFragment" >
+        <action
+            android:id="@+id/action_galleryFragment3_to_photoPagerFragment3"
+            app:destination="@id/photoPagerFragment3" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="pages"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoPagerFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.PhotoPagerFragment"
+        android:label="PhotoPagerFragment" >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="srcList"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonsFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.SeasonsFragment"
+        android:label="SeasonsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/staffListFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.StaffListFragment"
+        android:label="StaffListFragment" >
+        <action
+            android:id="@+id/action_staffListFragment3_to_actorPageFragment3"
+            app:destination="@id/actorPageFragment3" />
+        <argument
+            android:name="movieId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="isActor"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPageFragment3"
+        android:name="com.example.skillcinema.presentation.home.fragment.ListPageFragment"
+        android:label="ListPageFragment" >
+        <action
+            android:id="@+id/action_listPageFragment2_to_filmPageFragment3"
+            app:destination="@id/filmPageFragment3" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="collection"
+            app:argType="integer[]" />
+        <argument
+            android:name="idMovie"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation>

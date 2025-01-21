@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/findingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Искать в период с"
+        android:textColor="@color/grey_200"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/divider_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/findingTxt">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="1900-1921"
+            android:textColor="@color/blue_200"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backBtn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/back_black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nextBtn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/next_black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:isScrollContainer="true"
+            android:paddingBottom="16dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip6"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip7"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip8"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip9"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip10"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip11"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip12"
+                style="@style/chipStyleCalendar"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="1922" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

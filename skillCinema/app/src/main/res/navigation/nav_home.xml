@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    android:label="@string/nav_home_name"
+    app:startDestination="@id/pagerFragment">
+
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.example.skillcinema.presentation.onboarding.PagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/fragment_pager">
+        <action
+            android:id="@+id/action_pagerFragment_to_homeFragment"
+            app:popUpTo="@id/pagerFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_listPageFragment"
+            app:destination="@id/listPageFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listPageFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.ListPageFragment"
+        android:label="ListPageFragment"
+        tools:layout="@layout/fragment_list_page">
+        <action
+            android:id="@+id/action_listPageFragment_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="collection"
+            app:argType="integer[]" />
+        <argument
+            android:name="idMovie"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmPageFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.FilmPageFragment"
+        android:label="FilmPageFragment"
+        tools:layout="@layout/fragment_film_page">
+        <action
+            android:id="@+id/action_filmPageFragment_to_actorPageFragment"
+            app:destination="@id/actorPageFragment" />
+        <action
+            android:id="@+id/action_filmPageFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+
+        <action
+            android:id="@+id/action_filmPageFragment_to_listPageFragment"
+            app:destination="@id/listPageFragment" >
+            <argument
+                android:name="pages"
+                android:defaultValue="0" />
+        </action>
+        <action
+            android:id="@+id/action_filmPageFragment_to_photoPagerFragment"
+            app:destination="@id/photoPagerFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_filmPageFragment_to_staffListFragment"
+            app:destination="@id/staffListFragment" />
+        <action
+            android:id="@+id/action_filmPageFragment_self"
+            app:destination="@id/filmPageFragment" />
+        <action
+            android:id="@+id/action_filmPageFragment_to_seasonsFragment"
+            app:destination="@id/seasonsFragment" />
+        <action
+            android:id="@+id/action_filmPageFragment_to_additionalBottomSheetFragment"
+            app:destination="@id/additionalBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actorPageFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.ActorPageFragment"
+        android:label="ActorPageFragment"
+        tools:layout="@layout/fragment_actor_page" >
+        <action
+            android:id="@+id/action_actorPageFragment_to_filmographyFragment"
+            app:destination="@id/filmographyFragment" />
+        <action
+            android:id="@+id/action_actorPageFragment_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_photoPagerFragment"
+            app:destination="@id/photoPagerFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="pages"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmographyFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.FilmographyFragment"
+        android:label="FilmographyFragment"
+        tools:layout="@layout/fragment_filmography" >
+        <action
+            android:id="@+id/action_filmographyFragment_to_filmPageFragment"
+            app:destination="@id/filmPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonsFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.SeasonsFragment"
+        android:label="SeasonsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/staffListFragment"
+        tools:layout="@layout/fragment_staff_list"
+        android:name="com.example.skillcinema.presentation.home.fragment.StaffListFragment"
+        android:label="StaffListFragment" >
+
+        <argument
+            android:name="movieId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="isActor"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_staffListFragment_to_actorPageFragment"
+            app:destination="@id/actorPageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoPagerFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.PhotoPagerFragment"
+        android:label="PhotoPagerFragment" >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="srcList"
+            app:argType="string[]" />
+    </fragment>
+    <dialog
+        android:id="@+id/additionalBottomSheetFragment"
+        android:name="com.example.skillcinema.presentation.home.fragment.AdditionalBottomSheetFragment"
+        android:label="AdditionalBottomSheetFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.skillcinema.data.dataSource.database.model.CollectionMovie" />
+    </dialog>
+
+
+</navigation>

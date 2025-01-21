@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:isScrollContainer="true"
+            android:paddingStart="26dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="0dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/framesChip"
+                style="@style/chipStyle"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:checked="true"
+                android:text="@string/chip_frames"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/filmingChip"
+                style="@style/chipStyle"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:checkable="true"
+                android:text="@string/chip_filming"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/postersChip"
+                style="@style/chipStyle"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:text="@string/chip_posters"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/galleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

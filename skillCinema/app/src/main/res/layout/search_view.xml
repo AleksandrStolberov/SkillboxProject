@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginTop="20sp"
+    android:background="@drawable/searchview_bachground"
+    android:backgroundTint="@color/grey_100"
+    android:padding="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/search_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchEdit"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:backgroundTint="@color/grey_100"
+        android:hint="@string/editHint"
+        android:inputType="text|textNoSuggestions"
+        android:textColor="@color/black_200"
+        android:textColorHint="@color/grey_200"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/lineIcon"
+        app:layout_constraintStart_toEndOf="@id/searchIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lineIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:padding="4dp"
+        android:src="@drawable/line"
+        app:layout_constraintEnd_toStartOf="@id/paramsIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/paramsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/params"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
